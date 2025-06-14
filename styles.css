@@ -1,15 +1,16 @@
 /* Basic body styles */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #ffffff; /* White background for the whole page */
-  color: #1c1c1c; /* Default text color */
+body { /* Styles for the whole page */
+  background-color: #000000; /* Sets a light blue background color */
+  font-family: Avenir; /* Sets the font for the text */
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
 }
 
 /* Header styles */
 header {
   padding: 1rem;
-  background-color: #fff; /* White header background */
+  background-color: #ffffff; 
+  color: #000000;/* White header background */
 }
 
 /* Hero section styles */
@@ -17,7 +18,7 @@ header {
   background-color: #000; /* Black background under the header */
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: left;
   align-items: flex-start;
   padding: 2rem 1rem;
 }
@@ -26,62 +27,77 @@ header {
 .hero-left {
   display: flex;
   flex-direction: column; /* Stack children vertically */
-  flex: 1 1 350px;
-  max-width: 400px;
+  flex: 1 1 500px;
+  max-width: 500px;
+  text-align: center; /* Aligns text to the left */
+  margin-left: 60px; /* Adds space from the left edge */
+  margin-right: 10rem; /* You can change 50px to adjust how far from the right it appears */
 }
 
 /* Box for heading and supporting text */
 .hero-text-box {
-  background: #fff;
-  border: 1px solid #eee;
+  background: #000000;
+  border: 1px solid #000000;
   border-radius: 8px;
-  padding: 1rem;
-  margin: 0.5rem;
-  max-width: 350px;
-  flex: 1 1 300px;
+  padding: 0rem;
+  margin: 0rem;
+  max-width: 450px;
+  flex: 1 1 250px;
+  text-align: center; /* Aligns text to the left */
+  margin-left: 20px; /* Adds space from the left edge */
+  /* You can adjust margin-left as needed */
 }
 
 /* Box for button and donation note */
 .hero-action-box {
-  background: #fff;
-  border: 1px solid #eee;
+  background: #000000;
+  border: 1px solid #000000;
   border-radius: 8px;
   padding: 1rem;
-  margin: 0.5rem;
-  max-width: 250px;
-  flex: 1 1 200px;
+  margin: 0rem;
+  max-width: 500px;
+  flex: 1 1 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: left; /* Aligns text to the left */
+  margin-left: 0px; /* Adds space from the left edge */
+  /* You can adjust margin-left as needed */
 }
 
 /* Call to action button styles */
 .cta-button {
   background-color: #fbd308;
   color: #000;
-  padding: 0.8rem 1.5rem;
-  font-size: 1rem;
+  padding: 1rem 1rem;
+  font-size: 1.7rem;
   font-weight: bold;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  margin-bottom: 1rem;
+}
+
+/* Add a hover effect to the CTA button */
+.cta-button:hover { /* When the mouse is over the CTA button */
+  transform: scale(1.08); /* Makes the button pop out a little */
+  transition: transform 0.2s; /* Smooth transition for the pop out */
 }
 
 /* Donation note styles */
 .donation-note {
-  font-size: 0.95rem;
-  color: #555;
+  font-size: 0.80rem;
+  color: #ffffff;
   text-align: center;
+  max-width: 250px;
 }
 
 /* Box for the hero image */
 .hero-image-box {
   background: #fff;
-  border: 1px solid #eee;
-  border-radius: 8px;
-  padding: 1rem;
-  margin: 0.5rem;
+  border: 1px solid #000000;
+  border-radius: 0px;
+  padding: 0rem;
+  margin: 0rem;
   max-width: 300px;
   flex: 1 1 250px;
   display: flex;
@@ -91,9 +107,9 @@ header {
 
 /* Make the image fit nicely */
 .hero-image-box img {
-  width: 100%;
+  width: 140%;
   height: auto;
-  border-radius: 6px;
+  border-radius: 0px;
 }
 
 /* Responsive: stack everything on small screens */
@@ -108,4 +124,67 @@ header {
   .hero-image-box {
     max-width: 100%;
   }
+}
+
+h1 { /* Styles for the main heading */
+  color: rgb(255, 255, 255); /* Sets the h1 text color to black */
+  font-family: 'Times New Roman', Times, serif; /* Sets the font for h1 */
+  text-align: center;
+  font-size: 36px; /* Makes the h1 text bigger */
+  font-weight: 400;
+}
+
+p1 { /* Styles for the p1 element */
+  color: #000000;
+  font-family: 'Times New Roman', Times, serif;
+  letter-spacing: 2px;
+  font-size: 20px;
+  display: block; /* Makes p1 behave like a block element */
+  text-align: center; /* Aligns the text to the left */
+  margin-left: 20px; /* Adds space from the left edge to help align with the image */
+}
+
+p2 { /* Styles for paragraphs */
+  color: #ffffff; /* Sets the p text color to dark gray */
+  font-family: Avenir; /* Sets a different font for p2 */
+  text-align: center;
+}
+
+button { /* Styles for the button */
+  display: block; /* Makes the button take up its own line */
+  margin: 20px auto; /* Adds space above and below, centers horizontally */
+  padding: 10px 20px; /* Adds space inside the button */
+  background-color: #ffffff; /* Sets the button color */
+  color: rgb(0, 0, 0); /* Sets the text color to white */
+  border: none; /* Removes the border */
+  border-radius: 5px; /* Rounds the corners */
+  font-size: 16px; /* Sets the text size */
+  cursor: pointer; /* Changes the mouse to a pointer when hovering */
+}
+
+/* Styles for the hero image */
+.hero-image { /* Styles for the hero image */
+  margin: 0; /* Removes space outside the image */
+  padding: 0; /* Removes space inside the image border */
+}
+
+.sign-in { 
+  color: #000000; /* Sets the Sign In text to blue */
+  text-decoration: none; /* Removes underline from the link */
+  font: Avenir;
+  font-size: 20px; /* Sets the font size */
+  display: block; /* Makes the link take up its own line */
+  text-align: right; /* Moves the Sign In text to the right side */
+  margin-top: 10px; /* Adds space above the link */
+  margin-right: 0px; /* Adds space from the right edge */
+  margin-left: 0px;
+  padding: 7px;
+  background-color: #FFC907;
+  border-radius: 5px;
+}
+
+/* Add a hover effect to the Sign In button/link */
+.sign-in:hover { /* When the mouse is over the Sign In link */
+  transform: scale(1.08); /* Makes the link pop out a little */
+  transition: transform 0.2s; /* Smooth transition for the pop out */
 }
