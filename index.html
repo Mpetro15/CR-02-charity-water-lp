@@ -22,6 +22,13 @@
     <p1 style="display: inline; margin: 0 0px; font-weight:200;">charity: water</p1>
     <!-- Sign In text as a paragraph, now a link with a class for styling -->
     <a href="#" class="sign-in" style="display: inline; margin-left: 985px; color: #000000; font-weight: 400; cursor: pointer;">Sign In</a>
+    <!-- Hamburger menu icon for mobile view -->
+    <div class="hamburger-menu" onclick="toggleMenu()" style="display: none;">
+      <!-- Three lines for the hamburger icon -->
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
   </header> <!-- Header section ends -->
 
   <!-- Hero section with main message and image -->
@@ -46,6 +53,34 @@
       <img src="charity water picture.jpg" alt="Mother and child collecting water" />
     </div>
   </section>
+
+  <script>
+    // This function shows or hides the sign-in link when the hamburger is clicked
+    function toggleMenu() {
+      var signIn = document.querySelector('.sign-in');
+      if (signIn.style.display === 'block') {
+        signIn.style.display = 'none';
+      } else {
+        signIn.style.display = 'block';
+      }
+    }
+
+    // Responsive menu toggle: show hamburger icon and hide sign-in link on small screens
+    function responsiveMenu() {
+      var signIn = document.querySelector('.sign-in');
+      var hamburger = document.querySelector('.hamburger-menu');
+      if (window.innerWidth < 600) {
+        signIn.style.display = 'none'; // Hide sign-in link
+        hamburger.style.display = 'block'; // Show hamburger icon
+      } else {
+        signIn.style.display = 'inline'; // Show sign-in link
+        hamburger.style.display = 'none'; // Hide hamburger icon
+      }
+    }
+
+    window.addEventListener('resize', responsiveMenu);
+    window.addEventListener('load', responsiveMenu);
+  </script>
 
 </body>
 </html>

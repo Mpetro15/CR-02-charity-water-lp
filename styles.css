@@ -126,6 +126,49 @@ header {
   }
 }
 
+/* Make the website look good on small screens like iPhones */
+@media (max-width: 600px) { /* Applies styles when the screen is 600px wide or less */
+  body {
+    padding: 10px; /* Adds space around the content */
+  }
+
+  h1 {
+    font-size: 28px; /* Makes the title a bit smaller for small screens */
+  }
+
+  p, p1, .donation-note {
+    font-size: 16px; /* Makes paragraph text easier to read on mobile */
+  }
+
+  .hero-image {
+    width: 100%; /* Makes the hero image fit the screen */
+    height: auto; /* Keeps the image from being stretched */
+    margin: 0 auto; /* Centers the image */
+    display: block; /* Makes sure the image is on its own line */
+  }
+
+  .hero-text-box,
+  .hero-action-box,
+  .hero-left {
+    margin-left: 0; /* Removes extra space on the left */
+    margin-right: 0; /* Removes extra space on the right */
+    text-align: center; /* Centers text for better mobile appearance */
+  }
+
+  .sign-in {
+    text-align: center; /* Centers the sign-in link */
+    margin-right: 0; /* Removes right margin */
+    margin-top: 15px; /* Adds a bit more space above */
+  }
+
+  button,
+  .cta-button {
+    width: 100%; /* Makes buttons stretch across the screen */
+    font-size: 18px; /* Makes button text bigger for touch screens */
+    padding: 12px 0; /* Adds more space inside the button */
+  }
+}
+
 h1 { /* Styles for the main heading */
   color: rgb(255, 255, 255); /* Sets the h1 text color to black */
   font-family: 'Times New Roman', Times, serif; /* Sets the font for h1 */
@@ -187,4 +230,31 @@ button { /* Styles for the button */
 .sign-in:hover { /* When the mouse is over the Sign In link */
   transform: scale(1.08); /* Makes the link pop out a little */
   transition: transform 0.2s; /* Smooth transition for the pop out */
+}
+
+/* Hamburger menu styles (hidden by default) */
+.hamburger-menu {
+  display: none; /* Hide hamburger by default */
+  cursor: pointer; /* Show pointer on hover */
+  width: 30px; /* Set width */
+  margin: 10px 20px 0 auto; /* Position to the right */
+}
+
+/* Hamburger bars */
+.hamburger-menu .bar {
+  width: 100%; /* Full width */
+  height: 4px; /* Height of each bar */
+  background-color: #0077b6; /* Blue color */
+  margin: 5px 0; /* Space between bars */
+  border-radius: 2px; /* Rounded edges */
+}
+
+/* Responsive styles for small screens */
+@media (max-width: 600px) {
+  .sign-in {
+    display: none; /* Hide sign-in link on small screens */
+  }
+  .hamburger-menu {
+    display: block; /* Show hamburger menu on small screens */
+  }
 }
